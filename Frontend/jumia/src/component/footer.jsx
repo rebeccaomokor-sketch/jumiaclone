@@ -21,7 +21,7 @@ function Footer() {
                     </div>
 
                     <div className="flex flex-row items-center gap-2">
-                        <input type="email" placeholder="Enter Email Address" className="bg-[white] text-black w-[250px] h-[40px] p-[0px_15px] rounded-[5px]"/><button className="text-[12px] border border-[white] w-[100px] h-[40px] rounded-[5px]">Subscribe</button>
+                        <input type="email" placeholder="Enter Email Address" className="bg-[white] text-black w-[250px] h-[40px] p-[0px_15px] rounded-[5px]" /><button className="text-[12px] border border-[white] w-[100px] h-[40px] rounded-[5px]">Subscribe</button>
                     </div>
 
                     <p className="text-[12px] text-gray-300">You can withdraw your consent at any time by clicking the Unsubscribe Link at the bottom of any email we send you</p>
@@ -36,14 +36,87 @@ function Footer() {
                         </div>
                     </div>
                     <div>
-                        <img src={downloadApp} className="w-50"/>
+                        <img src={downloadApp} className="w-50" />
                     </div>
                 </div>
 
             </section>
 
-            <section>
+            <section className="bg-[#535357] text-white flex flex-col gap-15 p-[30px_60px]">
+                <div className="flex flex-row gap-15">
+                    <div className="text-[12px] flex flex-col gap-9">
+                        <div className="flex flex-col gap-1">
+                            <h3 className="font-bold text-sm mb-2">NEED HELP?</h3>
+                            <p>Chat With US</p>
+                            <p>Help Center</p>
+                            <p>Contact Us</p>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                            <h3 className="font-bold text-sm mb-2">USEFUL LINKS</h3>
+                            <p>Service Center</p>
+                            <p>How to shop on Jumia?</p>
+                            <p>Delivery options and timelines</p>
+                            <p>How to return a product on Jumia?</p>
+                            <p>Corporate and bulk purchases</p>
+                            <p>Report a Product</p>
+                            <p>Dispute Resolution Policy</p>
+                            <p>Returns & Refund Timeline</p>
+                            <p>Return Policy</p>
+                            <p>Pickup Stations</p>
+                            <p>Jumia Delivery</p>
+                        </div>
+                    </div>
+                    <div  className="text-[12px] flex flex-col gap-9">
+                        <div>
+                            <h3 className="font-bold text-sm mb-2">ABOUT</h3>
+                            <p>About us</p>
+                            <p>Jumia careers</p>
+                            <p>Corporate Website</p>
+                            <p>Terms and Conditions</p>
+                            <p>Jumia Payment Information Guidelines</p>
+                            <p>Official Stores</p>
+                            <p>Flash Sales</p>
+                            <p>Black Friday</p>
+                            <p>Jumia Blog</p>
+                        </div>
+                        <div>
+                            <h3  className="font-bold text-sm mb-2">Privacy</h3>
+                            <p>Privacy Notice</p>
+                            <p>Cookie Notice</p>
+                            <p>Cookie Preferences</p>
+                        </div>
+                        <div>
 
+                        </div>
+                    </div>
+
+                    <div  className="text-[12px] flex flex-col gap-9">
+                        <div>
+                            <h3 className="font-bold text-sm mb-2">MAKE MONEY WITH JUMIA</h3>
+                            <p>Sell on Jumia</p>
+                            <p>Vendor hubs</p>
+                            <p>Join Jumia Affiliate Program</p>
+                          
+                        </div>
+                       
+                        
+                    </div>
+                     <div  className="text-[12px] flex flex-col gap-9">
+                        <div>
+                            <h3 className="font-bold text-sm mb-2">JUMIA INTERNATIONAL</h3>
+                            <p>Sell on Jumia</p>
+                            <p>Vendor hubs</p>
+                            <p>Join Jumia Affiliate Program</p>
+                          
+                        </div>
+                       
+                        
+                    </div>
+                </div>
+
+                <div>
+
+                </div>
             </section>
         </>
     )

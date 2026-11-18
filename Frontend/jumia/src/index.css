@@ -97,3 +97,26 @@ body {
     text-decoration: underline;
 
 }
+
+
+.product-prev-pic {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-prev-pic img {
+    width: 30px;
+}
+
+.product-pic {
+    width: 300px;
+    height: 300px;
+    background-image: url("https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/65/6401914/1.jpg?1991");
+    background-size: cover;
+}
+
+.bordered {
+    border-bottom: 2px solid rgb(234, 233, 233);
+    padding-bottom: 10px;
+}
