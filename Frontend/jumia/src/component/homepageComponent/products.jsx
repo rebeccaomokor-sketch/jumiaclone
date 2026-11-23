@@ -1,7 +1,13 @@
 import axios from "axios"
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function Products() {
+
+    const {id} = useParams();
+    
+    
 
     const [allProduct, setAllproduct] = useState([])
 
@@ -32,13 +38,13 @@ function Products() {
 
              <div className="flex flex-row gap-5 p-[30px_30px] products-wrapper">
                {allProduct ? allProduct.map((each)=> {
-                   return <div className="bg-white text-black p-[5px_7px] flex flex-col gap-0.5">
+                   return <Link to={`/products/${each._id}`}><div className="bg-white text-black p-[5px_7px] flex flex-col gap-0.5">
                      <img src={each.img} className="w-200 rounded-[15px]" />
                      <p className="text-[13px]">{each.name}</p>
                      <p className="text-[12px] flex items-center gap-2"><i className="bi-star-fill text-[#F68B1E] text-[12px]"></i>3.5 stars</p>
                      <h3>{each.price}</h3>
                      <p><del>N6,500</del> <span>-36%</span></p>
-                   </div>
+                   </div></Link>
                }) : ""}
              </div>
 

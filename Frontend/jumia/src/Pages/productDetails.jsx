@@ -1,6 +1,29 @@
+import axios from "axios";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 
 function ProductDetails() {
+    const {id} = useParams();
+
+    const [productData, setProductData] = useState({});
+
+   async function fetchData() {
+       try {
+         const {data} = await axios.get(`http://localhost:3000/products/${id}`)
+         setProductData(data);
+         console.log(data)
+       }catch(err){
+          console.log(`the error is ${err}`)
+       }
+    }
+
+    useEffect(()=> {
+        fetchData(); 
+    }, [id])
+
+
     return (
         <>
         <section className="flex flex-row gap-3 p-[30px_60px]">
@@ -21,7 +44,7 @@ function ProductDetails() {
                <div>
                 <div className="flex flex-col gap-2">
                     <p className="bg-black w-[fit-content] text-white text-[11px] p-[5px_5px]">Black Friday Deals</p>
-                    <h1 className="text-[20px]">Arsuxeo 1-12 Years Kids Girls Shoes Baby Spring Princess Sandals Children</h1>
+                    <h1 className="text-[20px]">{productData.name}</h1>
                     <p className="text-[12px] bordered">Brand: <span className="text-[blue]">Arsuxeo</span> | <span className="text-[blue] ">Similar products from Arsuxeo</span></p>
                     <div className="flex flex-row gap-2 items-center">
                         <h1 className="text-[25px] font-extrabold">₦ 7,200</h1>
@@ -35,11 +58,10 @@ function ProductDetails() {
                 </div>
                </div>
             </div>
-
             <div>
+                <div> </div>
                 <div></div>
-                <div></div>
-            </div>
+            </div>      
         </section>
         </>
     )
