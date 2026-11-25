@@ -1,4 +1,5 @@
 import SecondNavbar from "./secondNavbar";
+import { Link } from "react-router-dom";
 function Navbar() {
 
     return (
@@ -30,7 +31,7 @@ function Navbar() {
                         </div>
                         <p className="flex flex-row gap-3 items-center"><i className="bi-person"></i> Account <i className="bi-chevron-down"></i></p>
                         <p className="flex flex-row gap-3 items-center"><i className="bi-question-circle"></i>Help <i className="bi-chevron-down"></i></p>
-                        <p className="flex flex-row gap-3 items-center"><i className="bi-cart3"></i>Cart </p>
+                       <Link to="/cart"> <p className="flex flex-row gap-3 items-center"><i className="bi-cart3"></i>Cart </p></Link>
                     </div>
                 </nav>
                 <SecondNavbar />

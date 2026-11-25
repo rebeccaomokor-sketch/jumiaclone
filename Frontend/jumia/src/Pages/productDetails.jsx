@@ -21,7 +21,28 @@ function ProductDetails() {
 
     useEffect(()=> {
         fetchData(); 
-    }, [id])
+    }, [id]);
+
+    const [cart, setCart] = useState(()=> {
+        const saved = localStorage.getItem('cartItems');
+        return saved ? JSON.parse(saved) : [];
+    })
+
+    function addToCart() {
+        const existingItem = cart.find((item) => item._id == productData._id);
+
+        let updatedCart;
+
+        if(existingItem) {
+           updatedCart = cart.map((item)=> item._id == productData._id ? {...item, quantity: item.quantity + 1}: item);
+        }else {
+            updatedCart = [...cart, productData]
+        }
+
+        setCart(updatedCart);
+        localStorage.setItem('cartItems', JSON.stringify(updatedCart));
+        alert("added to cart")
+    }
 
 
     return (
@@ -55,6 +76,7 @@ function ProductDetails() {
                     <p>+ shipping from ₦ 750 to LEKKI-AJAH (SANGOTEDO)</p>
                     <h3>Select Other Option</h3>
                     <img src="https://ng.jumia.is/unsafe/fit-in/150x150/filters:fill(white)/product/36/6401914/1.jpg?1550" alt="" className="w-[30px]"/>
+                    <button className="bg-[orange] text-white w-full h-[40px]" onClick={addToCart}>Add to Cart</button>
                 </div>
                </div>
             </div>

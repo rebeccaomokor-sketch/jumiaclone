@@ -120,3 +120,8 @@ body {
     border-bottom: 2px solid rgb(234, 233, 233);
     padding-bottom: 10px;
 }
+
+.cart {
+    background-color: #F1F1F2;
+    padding: 50px 80px;
+}
